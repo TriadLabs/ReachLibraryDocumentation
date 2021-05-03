@@ -20,8 +20,7 @@ Start/Stop time within session for further granularity. If no times are provided
 
 Set of collision points generated as a subset of prescribed points that we've calculated based on given input parameters
 
-
-Example API Call
+### Example API Call
 `http://127.0.0.1:8000/api/get_session_collision_points/?session_id=662&session_hand=Left&session_start_time=2020-11-13+17%3A29%3A58&session_end_time=2020-11-13+17%3A30%3A44&segment_sequence_id=0`
 
 ## Get Last Prescribed Assessment Point Set
@@ -38,7 +37,7 @@ None
 
 Most recent set of prescribed points that the given user was given in their last assessment (includes both left and right hand points).
 
-Example API Call
+### Example API Call
 `http://127.0.0.1:8000/api/get_last_prescribed_assessment_points/?oculus_gamertag=Roosh`
 
 
