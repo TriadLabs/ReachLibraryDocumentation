@@ -1,5 +1,5 @@
 ---
-layout: Default
+layout: default
 title: Sending Motion Data
 nav_order: 2
 ---

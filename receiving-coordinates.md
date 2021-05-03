@@ -1,5 +1,5 @@
 ---
-layout: Default
+layout: default
 title: Receiving Coordinates
 nav_order: 3
 ---
