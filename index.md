@@ -4,14 +4,34 @@ title: Reach Library Documentation
 nav_order: 1
 ---
 
-# Reach Library Documentation
+### Markdown
 
-The Reach Library is a downloadable Unity package that allows you to call and interact with the Reach system and API. You can use it to do a variety of tasks within the Reach ecosystem such as send information about a user's motion data and game performance as well as to get back coordinates which can drive gameplay elements. 
+Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-[PICTURE OF PLUGIN FOLDER STRUCTURE]
+```markdown
+Syntax highlighted code block
 
-In order to use the plugin, you must drag in the Reach prefab shown in the picture above to your gameplay scene.
+# Header 1
+## Header 2
+### Header 3
 
-[ PICTURE OF MAIN PLUGIN PREFAB]
+- Bulleted
+- List
 
-This document starts with a high level overview of the functionality you can expect from the library followed by a detailed listing of each function along with a detailed description of expected input and output parameters.
+1. Numbered
+2. List
+
+**Bold** and _Italic_ and `Code` text
+
+[Link](url) and ![Image](src)
+```
+
+For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+
+### Jekyll Themes
+
+Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/TriadLabs/ReachLibraryDocumentation/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+
+### Support or Contact
+
+Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
