@@ -10,6 +10,7 @@ In order to access the REACH API, you must include an authorization token with y
 once you recieve one from us you'll be able to use it until we notify you of any changes 
 
 C# Example:
+```C#
         public string CallRestMethod(string url)
         {
             var client = new RestClient(url);
@@ -20,3 +21,4 @@ C# Example:
             IRestResponse response = client.Execute(request);
             return response.Content;
         }
+```
