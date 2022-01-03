@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Reach Security & Authentication
-nav_order: 7
+nav_order: 8
 ---
 
 # Token Authentication Instructions

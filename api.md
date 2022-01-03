@@ -1,7 +1,7 @@
 ---
 layout: default
 title: The Reach API
-nav_order: 6
+nav_order: 7
 ---
 
 # The Reach API
@@ -16,7 +16,7 @@ The Reach API allows you to access information from the Reach System using stand
 ## Uploading Data to Reach
 
 
-## List of Reach API Calls
+## Complete List of Reach API Functions
 
 
 
