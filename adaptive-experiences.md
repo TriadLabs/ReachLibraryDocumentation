@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Reach Adaptive Experiences (Firefly Chase)
+title: Adaptive Experiences
 nav_order: 3
 ---
 
