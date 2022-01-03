@@ -1,5 +1,7 @@
 ---
 layout: default
-title: Asset Management for Reach VR Experiences
-nav_order: 6
+title: Asset Management
+nav_order: 8
 ---
+
+# Asset Management for Reach VR Experiences
