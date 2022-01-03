@@ -4,4 +4,18 @@ title: Reach Assessments
 nav_order: 2
 ---
 
-Eu exercitation est elit nulla anim reprehenderit dolor in aute nisi fugiat. Lorem Lorem reprehenderit aliquip est qui fugiat. Reprehenderit elit duis tempor ullamco ullamco incididunt quis id sint voluptate. Magna sunt consectetur ex nisi laboris dolor tempor id nulla aliquip enim. Elit nostrud in mollit Lorem consequat Lorem ea. Ad Lorem deserunt occaecat sunt velit adipisicing pariatur aliquip pariatur est tempor labore anim nostrud. Enim nulla aliquip et exercitation deserunt.
+# Reach Assessments
+
+Reach uses an assessment system to create baselines and goals for end-users of the system. When a user first signs up for Reach, one of the first things they will be asked to do is complete an assessment.
+
+## The Volume Assessment
+
+The Volume Assessment is a fundamental part of the Reach system. When users complete a Volume Assessment, Reach learns about their shoulder limitations and helps set goals for shoulder health progress. The Volume Assessment uses a set of goal target coordinates that represents the full range of motion for a healthy adult.
+
+## The Velocity Assessment
+
+(Coming soon.)
+
+## The Accuracy Assessment
+
+(Coming soon.)
