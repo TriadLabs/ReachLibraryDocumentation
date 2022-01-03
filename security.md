@@ -1,12 +1,12 @@
 ---
 layout: default
-title: Token Authentication
-nav_order: 2
+title: Reach Security & Authentication
+nav_order: 10
 ---
 
 # Token Authentication Instructions
 
-In order to access the REACH API, you must include an authorization token with your request. Currently we do not expire auth tokens so 
+In order to access the Reach API and databases from VR applications, you must include an authorization token with your request. Currently we do not expire auth tokens so 
 once you recieve one from us you'll be able to use it until we notify you of any changes 
 
 C# Example:
