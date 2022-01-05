@@ -18,7 +18,7 @@ The database architecture for Reach system components can be divided broadly int
 
 ### Django Tables and Functions
 
-#### User Authentication and Profiles
+#### User Authentication, Permissions, and Profiles
 
 | Table Name                     | Description         |
 |:-------------------------------|:--------------------|
@@ -28,7 +28,7 @@ The database architecture for Reach system components can be divided broadly int
 | auth_group_permissions         | Django-generated table to manage Django user permissions. Not currently used very much.   |
 | auth_permission                | Django-generated table to manage Django user permissions. Not currently used very much.   |
 | authtoken_token                | Django plugin generated table to manage token authentication. 3rd party developers may request a token, and tokens reside in this table. Tokens currently do not expire.  |
-| account_emailconfirmation      | good and plenty   |
+| Client                         | Profile information that is associated with a ReachUser table entry by means of the user_id foreign key. Currently, the most important entry in this table other than the user_id field is OculusLinkId, which represents the value that end-users have entered for their Oculus account usernames.   |
 | account_emailconfirmation      | good and plenty   |
 | account_emailconfirmation      | good and plenty   |
 | account_emailconfirmation      | good and plenty   |
