@@ -4,10 +4,10 @@ title: Database Architecture
 nav_order: 6
 ---
 
-# The Reach Database
-
 1. TOC
 {:toc}
+
+# The Reach Database
 
 The Reach system includes 1) the Reach Shoulder Health VR application, 2) a web portal where end-users can view their progress, and 3) 3rd party games and experiences that interface with Reach APIs. Each of these three components may access Reach databases.
 
@@ -17,11 +17,11 @@ To be granted database access, [contact the Reach development team.](mailto:supp
 
 In general, changes and additions to the database structure are made and managed via the Django ORM in order to keep everything neat and tidy. If you are developing an application in conjunction with the Reach team and would like to request additions or updates to the database, [contact the Reach DB admin.](mailto:support@triadlabs.com){:target='_blank'}
 
-## Database Architecture
+# Database Architecture
 
 The database architecture for Reach system components can be divided broadly into tables used primarily for/by Django and tables used primarily for/by VR applications.
 
-### Django Tables and Functions
+## Django Tables and Functions
 
 | User Auth, Permissions, & Profiles   | Description         |
 |:-------------------------------|:--------------------|
@@ -56,7 +56,7 @@ The database architecture for Reach system components can be divided broadly int
 
 
 
-### Additional Portal Functionality Tables
+## Additional Portal Functionality Tables
 
 | Table Name                     | Description         |
 |:-------------------------------|:--------------------|
@@ -69,7 +69,7 @@ The database architecture for Reach system components can be divided broadly int
 
 
 
-### Reach VR Tables and Functions
+## Reach VR Tables and Functions
 
 | Table Name                     | Description         |
 |:-------------------------------|:--------------------|
@@ -92,9 +92,9 @@ The database architecture for Reach system components can be divided broadly int
 
 
 
-### Reach VR Table Details
+## Reach VR Table Details
 
-#### MotionCaptureSettings
+### MotionCaptureSettings
 
 | Field Name                     | Description         |
 |:-------------------------------|:--------------------|
@@ -112,7 +112,7 @@ The database architecture for Reach system components can be divided broadly int
 | MinArmLength          | Description goes here. |
 
 
-#### ReachParameters
+### ReachParameters
 
 Entries in this table may or may not be applied universally (i.e. to all Reach VR experiences). Check the value in the "Universal" column (0 = not universal, 1 = universal).
 
@@ -134,7 +134,7 @@ GameId indicates whether/how the value was generated for a particular game in th
 | PrecisionMaxColliderGranularity |
 | PrecisionMinColliderGranularity |
 
-#### VolumeSegment
+### VolumeSegment
 
 | Field Name                     | Description         |
 |:-------------------------------|:--------------------|
@@ -145,7 +145,7 @@ GameId indicates whether/how the value was generated for a particular game in th
 | CoordinateKeyY          | Description goes here. |
 | CoordinateKeyZ          | Description goes here. |
 
-#### VolumeSegmentSequence
+### VolumeSegmentSequence
 
 | Field Name                     | Description         |
 |:-------------------------------|:--------------------|
@@ -171,26 +171,26 @@ GameId indicates whether/how the value was generated for a particular game in th
 | InsertTime          | Description goes here. |
 | CreatedBy          | Description goes here. |
 
-#### VRMotionCaptureCollisionItem
+### VRMotionCaptureCollisionItem
 
 | Field Name                     | Description         |
 |:-------------------------------|:--------------------|
 | FieldName          | Description goes here. |
 
 
-#### VRMotionCaptureDemonstratedItem
+### VRMotionCaptureDemonstratedItem
 
 | Field Name                     | Description         |
 |:-------------------------------|:--------------------|
 | FieldName          | Description goes here. |
 
-#### VRMotionCapturePrescribedItem
+### VRMotionCapturePrescribedItem
 
 | Field Name                     | Description         |
 |:-------------------------------|:--------------------|
 | FieldName          | Description goes here. |
 
-#### VRMotionCaptureSession
+### VRMotionCaptureSession
 
 | Field Name                     | Description         |
 |:-------------------------------|:--------------------|
