@@ -7,7 +7,7 @@ nav_order: 7
 # The Reach API
 The Reach API allows you to access information from the Reach System using standard REST calls. See the following document for information on calls available to you. We're working on getting additional API's up that you'll need. If you have an API/piece of functionality you require that's not listed on here, let us know and we'll stand one up for you. 
 
-![API Flow Diagram]({{ site.url }}/assets/images/api_flow.PNG)
+![API Flow Diagram](/assets/images/api_flow.PNG)
 <span class="caption">API Flow Diagram</span>
 
 
