@@ -15,7 +15,9 @@ The Reach API allows you to access information from the Reach System using stand
 
 This method should be called as soon as gameplay begins in order for the Reach System to track motion data. 
 
-```StartTrackingMotionData();```
+```
+StartTrackingMotionData();
+```
 
 Internally this function looks for an instance of the DataCaptureController (or spawns one if it doesn't find one) and has it track motion data every .15 seconds. When the upload function is called the data for that function will come from the DataCaptureController. 
 
@@ -56,7 +58,9 @@ SamplePointStyle is an enum with the following values:
 
 Uploading data to the ReachSystem should be done anytime a game wants to complete a player's session. To upload data, simply call the following function:
 
-```UploadFinishedGameplayData();```
+```
+UploadFinishedGameplayData();
+```
 
 This will get the required data from the other Reach objects in the scene (DBManager & DataCaptureController) and send up the prescribed, demonstrated, and collision points associated with the user's gameplay session. 
 
