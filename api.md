@@ -5,12 +5,14 @@ nav_order: 7
 ---
 
 # The Reach API
+
 The Reach API allows you to access information from the Reach System using standard REST calls. See the following document for information on calls available to you. We're working on getting additional API's up that you'll need. If you have an API/piece of functionality you require that's not listed on here, let us know and we'll stand one up for you. 
 
 ![API Flow Diagram](/assets/images/api_flow.PNG)
-<span class="caption">API Flow Diagram</span>
+<p class="caption">API Flow Diagram</p>
 
 ## Collecting Motion Data
+
 This method should be called as soon as gameplay begins in order for the Reach System to track motion data. 
 
 ```StartTrackingMotionData();```
@@ -19,12 +21,17 @@ Internally this function looks for an instance of the DataCaptureController (or 
 
 
 ## Fetching Data from Reach
+
+```
 public List<ReachPrescriptionPoint> GetPrescribedPointData(string hand = "Right", int chosenSequence = -1, PrescriptionStyle velocityStyle = PrescriptionStyle.Medium, PrescriptionStyle accuracyStyle = PrescriptionStyle.Medium, int numPoints = 1000)
+```
 
 This method allows games to fetch a list of prescribed points that they can use in their games. The caller of this function must indicate the hand they want to get points for ("Right" or "Left") and the number of points they wish to return. The other parameters are optional unless the user wishes to get a sample set of points which we will define below. 
 
 **Sample Point Sets**
+
 Reach comes with 5 sets of sample points for internal testing of gameplay that can be accessesd with the GetPrescribedPointData method. In order to do so the user must first call the function:
+
 ```
     public void SelectSamplePoints(SamplePointStyle style)
     {
@@ -46,6 +53,7 @@ SamplePointStyle is an enum with the following values:
 ```
 
 ## Uploading Data to Reach
+
 Uploading data to the ReachSystem should be done anytime a game wants to complete a player's session. To upload data, simply call the following function:
 
 ```UploadFinishedGameplayData();```
@@ -82,6 +90,7 @@ public class ReachGameMetadata
 
 
 **ReachPrescriptionPoint**
+
 This class is used in the return value for data given to 3rd party games by the ReachLibrary. When requesting a list of points from the Reach System, data is given back as a List<ReachPrescriptionPoint>. The point Vector includes the x,y,z value of the point to prescribe.
 
 ```
