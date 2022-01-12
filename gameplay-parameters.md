@@ -36,7 +36,7 @@ This allows you to change the rate at which data is collected. A value of 1 mean
 
 **HitPointThreshold**
 
-This value allows you to change the size of the collider around the 
+This value allows you to change the size of the collider around the hand to determine what counts as a "collision point" or hit point.
 
 **FinalRoundTimeInSeconds**
 
