@@ -88,7 +88,6 @@ public class ReachGameMetadata
     public Sprite gameSprite;
     public string gameDescription;
     public string gameSceneName;
-
 }
 ```
 
