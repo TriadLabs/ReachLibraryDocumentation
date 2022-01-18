@@ -10,6 +10,8 @@ The Reach system uses virtual reality experiences to identify shoulder limitatio
 
 The Reach system includes 1) the Reach Shoulder Health VR application, 2) a web portal where end-users can view their progress, and 3) 3rd party games and experiences that interface with Reach APIs. Each of these three components may access Reach databases and API endpoints.
 
+The Reach Shoulder Health experience is downloadable on the Oculus Home application. In order to access the alpha release channel (for the latest dev build) please contact your Reach admin and provide them with your Oculus Gamertag.
+
 {:toc}
 
 
