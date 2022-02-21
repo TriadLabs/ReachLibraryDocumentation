@@ -17,6 +17,7 @@ To be granted database access, [contact the Reach development team.](mailto:supp
 
 In general, changes and additions to the database structure are made and managed via the Django ORM in order to keep everything neat and tidy. If you are developing an application in conjunction with the Reach team and would like to request additions or updates to the database, [contact the Reach DB admin.](mailto:support@triadlabs.com){:target='_blank'}
 
+
 # Database Architecture
 
 The database architecture for Reach system components can be divided broadly into tables used primarily for/by Django and tables used primarily for/by VR applications.

@@ -6,6 +6,8 @@ nav_order: 5
 
 # Gameplay Parameters
 
+These parameters are used by the Reach Assessment and Firefly Chase Adaptive modes to determine the relevant aspects of their gameplay. Specifically, the Assessment modes use the values given in the MotionCaptureSettings table while the Adaptive mode uses  
+
 **Grid Density**
 
 This refers to the space between generated points in a given volume. Reducing this value decreases the space between points and results in more potential points being generated while increasing it does the opposite. Default value is .1 which gives us a good balance between spacing and making sure that gameplay doesn't take too long. Lower densities are better for getting a more accurate picture of someone's capacity but take longer to complete. For larger volumes it's recommended to increase this to a value such as .14. 
