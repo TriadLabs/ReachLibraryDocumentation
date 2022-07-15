@@ -3,19 +3,9 @@ layout: default
 title: Database Architecture
 nav_order: 6
 ---
-
-# The Reach Databases
-
-Currently, Reach uses a staging database for development/testing and a production database for end-users.
-
-To be granted database access, [contact the Reach development team.](mailto:support@triadlabs.com){:target='_blank'}
-
-In general, changes and additions to the database structure are made and managed via the Django ORM in order to keep everything neat and tidy. If you are developing an application in conjunction with the Reach team and would like to request additions or updates to the database, [contact the Reach DB admin.](mailto:support@triadlabs.com){:target='_blank'}
-
 ### Table of Contents
 
-- [The Reach Databases](#the-reach-databases)
-    - [Table of Contents](#table-of-contents)
+- [Reach Databases](#reach-databases)
 - [Reach VR Experiences -> Reach Databases](#reach-vr-experiences---reach-databases)
 - [Database Architecture](#database-architecture)
   - [Django Tables and Functions](#django-tables-and-functions)
@@ -30,6 +20,17 @@ In general, changes and additions to the database structure are made and managed
     - [VRMotionCaptureDemonstratedItem](#vrmotioncapturedemonstrateditem)
     - [VRMotionCapturePrescribedItem](#vrmotioncaptureprescribeditem)
     - [VRMotionCaptureSession](#vrmotioncapturesession)
+
+
+# Reach Databases
+
+Currently, Reach uses a staging database for development/testing and a production database for end-users.
+
+To be granted database access, [contact the Reach development team.](mailto:support@triadlabs.com){:target='_blank'}
+
+In general, changes and additions to the database structure are made and managed via the Django ORM in order to keep everything neat and tidy. If you are developing an application in conjunction with the Reach team and would like to request additions or updates to the database, [contact the Reach DB admin.](mailto:support@triadlabs.com){:target='_blank'}
+
+
 
 # Reach VR Experiences -> Reach Databases
 
