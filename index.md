@@ -4,10 +4,6 @@ title: Reach Documentation
 nav_order: 1
 ---
 
-# Table of Contents
-
-{:toc}
-
 # The Reach Ecosystem
 
 Reach is on a mission to use virtual reality to help people improve shoulder health. Through a combination of VR experiences and data analysis, we're able to help people improve their mobility, reduce the risk of shoulder pain, and build shoulder strength after surguries, injuries, and other treatments.
