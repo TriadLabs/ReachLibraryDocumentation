@@ -10,7 +10,7 @@ Reach is currently undergoing a process of decoupling an API layer from the Reac
 
 ### Reach Unity API Manager
 
-The Reach Unity project interfaces with the API layer through [an API manager}(https://github.com/TriadLabs/Reach-Shoulder-Health-Unity/blob/master/Assets/APIManager.cs). This manager includes a series of classes that assist with connecting to the middle layer, calling functions, fetching and writing data, and more.
+The Reach Unity project interfaces with the API layer through [an API manager](https://github.com/TriadLabs/Reach-Shoulder-Health-Unity/blob/master/Assets/APIManager.cs). This manager includes a series of classes that assist with connecting to the middle layer, calling functions, fetching and writing data, and more.
 
 
 ### Collecting Motion Data
