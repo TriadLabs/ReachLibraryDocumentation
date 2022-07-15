@@ -33,7 +33,7 @@ In general, changes and additions to the database structure are made and managed
 
 # Reach VR Experiences -> Reach Databases
 
-Reach VR Unity experiences connect to Reach databases through the API layer via a [DB Manager script](https://github.com/TriadLabs/Reach-Shoulder-Health-Unity/blob/be3c982679c26b3f7d2c70f631ac02c15bec3526/Assets/Scripts/DBManager.cs). The API layer [manages database connections and calls to the database](https://github.com/TriadLabs/Reach-Middle-Tier/blob/main/source/server/database.js). Consult the [Reach API documentation for more details](https://triadlabs.github.io/ReachLibraryDocumentation/api.html).
+Reach VR Unity experiences connect to Reach databases through the API layer via a [API Manager script](https://github.com/TriadLabs/Reach-Shoulder-Health-Unity/blob/c102e6e26879d98ecd69e1d262cb2cd0dac3e69c/Assets/APIManager.cs). The API layer [manages database connections and calls to the database](https://github.com/TriadLabs/Reach-Middle-Tier/blob/main/source/server/database.js). Consult the [Reach API documentation for more details](https://triadlabs.github.io/ReachLibraryDocumentation/api.html).
 
 # Database Architecture
 

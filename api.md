@@ -70,7 +70,7 @@ Uploading data to the ReachSystem should be done anytime a game wants to complet
 UploadFinishedGameplayData();
 ```
 
-This will get the required data from the other Reach objects in the scene (DBManager & DataCaptureController) and send up the prescribed, demonstrated, and collision points associated with the user's gameplay session. 
+This will get the required data from the other Reach objects in the scene (APIManager & DataCaptureController) and send up the prescribed, demonstrated, and collision points associated with the user's gameplay session. 
 
 
 ## Complete List of Reach API Functions

@@ -25,9 +25,9 @@ Currently performance in challenge modes does not affect future challenge mode p
 
 **Calculating Collision Points**
 
-The Reach collision algorithm can be found in [DBManager.cs under the function (RecalculateDensity)](https://github.com/TriadLabs/Reach-Shoulder-Health-Unity/blob/be3c982679c26b3f7d2c70f631ac02c15bec3526/Assets/Scripts/DBManager.cs).
+The Reach collision algorithm can be found in [APIManager.cs under the function (RecalculateDensity)](https://github.com/TriadLabs/Reach-Shoulder-Health-Unity/blob/c102e6e26879d98ecd69e1d262cb2cd0dac3e69c/Assets/APIManager.cs).
 
 In order to calculate collisions we iterate over every "demonstrated" point of motion that we saw (this refers to the motion coordinates we captured from the hand controllers adjusted for head compensation) and then compare that points Vector3.Distance to each prescribed point. If it's below our threshold for a collision point (this threshold defaults to .14 and is analgous to a collider size in Unity) then we count that prescribed point as hit. This is an N squared operation (since we iterate over both demonstrated and prescribed points) which makes it time consuming so there's room for improvement here. 
 
-Collision calculations are set in motion by a call to UploadData in DBManager which VR experiences call once a gameplay session is complete. These collision points are then used to determine which points to prescribe in later experiences (as collided points are considered completely within a user's reach).
+Collision calculations are set in motion by a call to UploadData in APIManager which VR experiences call once a gameplay session is complete. These collision points are then used to determine which points to prescribe in later experiences (as collided points are considered completely within a user's reach).
 
