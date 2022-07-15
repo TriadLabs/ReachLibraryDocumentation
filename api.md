@@ -1,19 +1,23 @@
 ---
 layout: default
-title: The Reach API
+title: API Layer & ReachLibrary Functions
 nav_order: 8
 ---
 
-# The Reach API
+# The Reach API Layer
 
-The Reach API allows you to access information from the Reach System using standard REST calls. See the following document for information on calls available to you. We're working on getting additional API's up that you'll need. If you have an API/piece of functionality you require that's not listed on here, let us know and we'll stand one up for you. 
+Reach is currently undergoing a process of decoupling an API layer from the Reach VR Unity project to make it easier to build new features, modify existing calls, and manage application security. The API layer exists in its own repo and runs in an AWS Elastic Beanstalk Node.js environment.
 
-![API Flow Diagram](/assets/images/api_flow.PNG)
-<p class="caption">API Flow Diagram</p>
+### Reach Unity API Manager
 
-## Collecting Motion Data
+The Reach Unity project interfaces with the API layer through [an API manager}(https://github.com/TriadLabs/Reach-Shoulder-Health-Unity/blob/master/Assets/APIManager.cs). This manager includes a series of classes that assist with connecting to the middle layer, calling functions, fetching and writing data, and more.
 
-This method should be called as soon as gameplay begins in order for the Reach System to track motion data. 
+
+### Collecting Motion Data
+
+[ReachLibrary Function: StartTrackingMotionData](https://github.com/TriadLabs/Reach-Shoulder-Health-Unity/blob/c448728811782c6e4484fd05ea930adceeb8e4d9/Assets/ReachLibrary.cs)
+
+This method should be called as soon as gameplay begins in order for the Reach System to track motion data.
 
 ```
 StartTrackingMotionData();
@@ -22,13 +26,15 @@ StartTrackingMotionData();
 Internally this function looks for an instance of the DataCaptureController (or spawns one if it doesn't find one) and has it track motion data every .15 seconds. When the upload function is called the data for that function will come from the DataCaptureController. 
 
 
-## Fetching Data from Reach
+### Fetching Data from Reach
+
+[APIManager Function: GetPrescribedPointData](https://github.com/TriadLabs/Reach-Shoulder-Health-Unity/blob/c102e6e26879d98ecd69e1d262cb2cd0dac3e69c/Assets/APIManager.cs)
 
 ```
 public List<ReachPrescriptionPoint> GetPrescribedPointData(string hand = "Right", int chosenSequence = -1, PrescriptionStyle velocityStyle = PrescriptionStyle.Medium, PrescriptionStyle accuracyStyle = PrescriptionStyle.Medium, int numPoints = 1000)
 ```
 
-This method allows games to fetch a list of prescribed points that they can use in their games. The caller of this function must indicate the hand they want to get points for ("Right" or "Left") and the number of points they wish to return. The other parameters are optional unless the user wishes to get a sample set of points which we will define below. 
+This method allows VR experiences to fetch a list of prescribed points for a given user that may be used to paint targets. The caller of this function must indicate the hand they want to get points for ("Right" or "Left") and the number of points they wish to return. Other parameters are optional unless the user wishes to get a sample set of points which we will define below. 
 
 **Sample Point Sets**
 
@@ -55,6 +61,8 @@ SamplePointStyle is an enum with the following values:
 ```
 
 ## Uploading Data to Reach
+
+[ReachLibrary Function: UploadFinishedGameplayData](https://github.com/TriadLabs/Reach-Shoulder-Health-Unity/blob/c448728811782c6e4484fd05ea930adceeb8e4d9/Assets/ReachLibrary.cs)
 
 Uploading data to the ReachSystem should be done anytime a game wants to complete a player's session. To upload data, simply call the following function:
 

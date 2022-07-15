@@ -1,25 +1,23 @@
 ---
 layout: default
-title: Reach Assessments
-nav_order: 2
+title: Assessments
+nav_order: 3
 ---
 
 # Reach Assessments
 
 Reach uses an assessment system to create baselines and goals for end-users of the system. When a user first signs up for Reach, one of the first things they will be asked to do is complete an assessment.
 
-## The Volume Assessment
+## Firefly (Volume) Assessment
 
-The Volume Assessment is a fundamental part of the Reach system. When users complete a Volume Assessment, Reach learns about their shoulder limitations and helps set goals for shoulder health progress. The Volume Assessment uses a set of goal target coordinates that represents the full range of motion for a healthy adult.
+[Unity Scene: Main.unity](https://github.com/TriadLabs/Reach-Shoulder-Health-Unity/blob/master/Assets/Scenes/Main.unity)
 
-Unity Scene Name: Main
+The Volume Assessment is a fundamental part of the Reach system. When users complete a Volume Assessment, Reach learns about their shoulder limitations and helps set goals for shoulder health progress. The Volume Assessment uses a set of goal target coordinates (fetched via a call to the Reach Middle Tier) that represents the full range of motion for a healthy adult.
 
-## The Velocity Assessment
+## Velocity Assessment
 
-The Velocity Assessment allows the Reach system to establish a baseline for how fast a user is able to achieve motion to prescribed points. During the velocity assessment the user is asked to hit points while internally we are tracking how long the user takes to reach each point. The average time taken to reach each point is the average velocity value which we store for later usage. 
+Coming soon.
 
-Unity Scene Name: Precision Mode
+## Accuracy Assessment
 
-## The Accuracy Assessment
-
-(Coming soon.)
+Coming soon.

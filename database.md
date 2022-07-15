@@ -4,12 +4,7 @@ title: Database Architecture
 nav_order: 6
 ---
 
-1. TOC
-{:toc}
-
-# The Reach Database
-
-The Reach system includes 1) the Reach Shoulder Health VR application, 2) a web portal where end-users can view their progress, and 3) 3rd party games and experiences that interface with Reach APIs. Each of these three components may access Reach databases.
+# The Reach Databases
 
 Currently, Reach uses a staging database for development/testing and a production database for end-users.
 
@@ -17,6 +12,11 @@ To be granted database access, [contact the Reach development team.](mailto:supp
 
 In general, changes and additions to the database structure are made and managed via the Django ORM in order to keep everything neat and tidy. If you are developing an application in conjunction with the Reach team and would like to request additions or updates to the database, [contact the Reach DB admin.](mailto:support@triadlabs.com){:target='_blank'}
 
+{:toc}
+
+# Reach VR Experiences -> Reach Databases
+
+Reach VR Unity experiences connect to Reach databases through the API layer via a [DB Manager script](https://github.com/TriadLabs/Reach-Shoulder-Health-Unity/blob/be3c982679c26b3f7d2c70f631ac02c15bec3526/Assets/Scripts/DBManager.cs). The API layer [manages database connections and calls to the database](https://github.com/TriadLabs/Reach-Middle-Tier/blob/main/source/server/database.js). Consult the [Reach API documentation for more details](https://triadlabs.github.io/ReachLibraryDocumentation/api.html).
 
 # Database Architecture
 

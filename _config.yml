@@ -3,3 +3,5 @@ email: support@triadlabs.com
 
 remote_theme: pmarsceill/just-the-docs
 logo: "/assets/images/logo.svg"
+
+markdown: kramdown

@@ -5,4 +5,5 @@ nav_order: 10
 ---
 
 # Asset Management for Reach VR Experiences
-The Reach VR experience is transitioning to be availble for Quest. As such all plugins/libraries that are added must be Andriod compatible or provide an Andriod equivalent with pragma marks in the code when needed. We're limited by the poly count/tri limits of the Quest 1 so make sure to keep each scene under 1M polys. 
+
+Reach VR experiences, while originally developed for the Oculus Rift, are transitioning to target Meta Quest devices. As such, all plugins/libraries that are added must be Android-compatible or must provide an Android equivalent with pragma marks as necessary. Development is currently limited by the poly count/tri limits of the Quest 1, so please ensure that scenes are kept under 1M polygons.

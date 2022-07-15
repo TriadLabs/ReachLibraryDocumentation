@@ -6,7 +6,7 @@ nav_order: 5
 
 # Gameplay Parameters
 
-These parameters are used by the Reach Assessment and Firefly Chase Adaptive modes to determine the relevant aspects of their gameplay. Specifically, the Assessment modes use the values given in the MotionCaptureSettings table while the Adaptive mode uses  
+These parameters are used by Reach's assessments and adaptive experiences to determine relevant aspects of gameplay. Currently, the Firefly Assessment uses values given in the MotionCaptureSettings database table, while Firefly Chase, Space Gunner, and other adaptive experiences use values listed in the ReachParameters table.
 
 **Grid Density**
 

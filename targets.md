@@ -6,7 +6,11 @@ nav_order: 7
 
 # Painting Targets and Calculating Collisions
 
-Reach uses a set of algorthims to determine how to paint targets for different game modes as well as calculate collisions. We make a distinction between targets that are achieved from a gameplay perspective and those that are calculated to be collisions by the Reach system. This is because gameplay usually doesn't account for head movement/compensation while the Reach system. 
+Reach uses a set of algorthims housed in the API layer to determine how to paint targets for different VR experiences as well as calculate collisions. We make a distinction between targets that are hit from a gameplay perspective and those that are calculated to be collisions by the Reach system. This is because gameplay usually doesn't account for head movement/compensation while the Reach system does take these factors into account.
+
+### A Note on Head-Centric Targeting
+
+In the world of shoulder health, recovery from injuries and surguries often involves working around what is called "compensatory movement," i.e. movement that one's body undertakes in order to compensate for pain, stiffness, limited motion, etc. In the Reach system, we want to account for motion of the head, body, and torso in order to offest the impact of compensatory movements on motion capture data. To this end, Reach uses the VR headset as the 0,0,0 point of reference for all Reach targeting and collision calculations.
 
 **Calculating Prescribed Targets**
 
@@ -21,9 +25,9 @@ Currently performance in challenge modes does not affect future challenge mode p
 
 **Calculating Collision Points**
 
-The Reach collision algorithm can be found in DBManager.cs under the function (RecalculateDensity). 
+The Reach collision algorithm can be found in [DBManager.cs under the function (RecalculateDensity)](https://github.com/TriadLabs/Reach-Shoulder-Health-Unity/blob/be3c982679c26b3f7d2c70f631ac02c15bec3526/Assets/Scripts/DBManager.cs).
 
 In order to calculate collisions we iterate over every "demonstrated" point of motion that we saw (this refers to the motion coordinates we captured from the hand controllers adjusted for head compensation) and then compare that points Vector3.Distance to each prescribed point. If it's below our threshold for a collision point (this threshold defaults to .14 and is analgous to a collider size in Unity) then we count that prescribed point as hit. This is an N squared operation (since we iterate over both demonstrated and prescribed points) which makes it time consuming so there's room for improvement here. 
 
-Collision calculations are set in motion by a call to UploadData in DBManager which ours/3rd party experiences call once a gameplay session is complete. These collision points are then used to determine which points to prescribe in later experiences (as collided points are considered completely within a user's reach).
+Collision calculations are set in motion by a call to UploadData in DBManager which VR experiences call once a gameplay session is complete. These collision points are then used to determine which points to prescribe in later experiences (as collided points are considered completely within a user's reach).
 

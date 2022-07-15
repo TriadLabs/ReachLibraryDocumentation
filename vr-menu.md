@@ -1,23 +1,32 @@
 ---
 layout: default
-title: The Reach VR Menu
-nav_order: 4
+title: The Reach VR Home Screen
+nav_order: 2
 ---
+
+# Launching the Reach Menu
+
+**Arm Length Calibration/Headset Orientation**
+
+[Unity Scene: Armlength.unity](https://github.com/TriadLabs/Reach-Shoulder-Health-Unity/blob/master/Assets/Scenes/Armlength.unity)
+
+When users first launch Reach, they will first be asked to stand still and face forward with their arms at their side so that Reach can automatically measure their arm length and record this value to the database. Arm length is an important number for Reach, as all downstream VR experiences will inherit this value and scale gameplay accordingly. This calibration step also sets the user's headset orientation for the Oculus experience. All downstream VR experiences launched within the Reach VR Menu should inherit these values.
 
 # The Reach VR Experience Main Menu
 
+[Unity Scene: Menu.unity](https://github.com/TriadLabs/Reach-Shoulder-Health-Unity/blob/master/Assets/Scenes/Menu.unity)
+
+The Reach Main Menu functions as a hub for all of the VR experiences that are available to the user. It is the first screen that the user will see after completing the arm length and headset calibration.
+
 **Left Panel**
 
-This menu allows the user to change settings that affect the Reach experience. There are certain settings on it that only appear to Reach "superusers" such as the ability to record data as someone else and choose what types of points are prescribed in Reach experiences.
+This menu allows the user to change settings that affect the Reach experience, such as audio volume, etc. Additionally, there is a collection of settings that appears here only for Reach superusers and testers. These settings appear if a logged in Meta VR user is 1) registered in the production portal database and 2) has the "is_superuser" flag set to 1 in the [ReachUser database table](https://triadlabs.github.io/ReachLibraryDocumentation/database.html).
 
-**Middle Menu**
+**Middle Panel**
 
-This menu stores the menu options for all Reach Experiences. Current experiences are the Reach Assessment, Reach Assessment (Volume Defined), Firefly Chase (volume, velocity, and accuracy), Space Gunner, and Power Solitare. 
-
-**Menu Compeonents**
-The menu has many built in components to help with ease of building. On the left hand panel you'll find elements such as checkboxes, buttons, and sliders that are pre-built and can be duplicated and re-used. On the middle menu you'll find that every menu item is once again a component that can be re-used. Look at MainMenuManager.cs for more information. 
+This menu lists all current Reach VR experiences that are available to the user. Users may select the VR experience they want to play and launch the game from the middle panel. 
 
 **Right Menu**
 
-This menu displays the instructions neccesary to access the Reach Portal. If a user has not signed up for the portal then it will display signup instructions as well as the code neccesary to link their VR data with our portal.
+This menu displays the instructions neccesary to access the Reach Portal. If a user has not signed up for the portal, the right panel will display signup instructions and a "link code" (i.e. their Meta username) which can be used to sign up for the portal.
 

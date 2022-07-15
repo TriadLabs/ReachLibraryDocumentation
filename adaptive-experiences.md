@@ -1,20 +1,27 @@
 ---
 layout: default
 title: Adaptive Experiences
-nav_order: 3
+nav_order: 4
 ---
 
-# Reach Adaptive Experiences (Firefly Chase)
-The Reach adaptive experiences use the data generated in the Reach assessment experience to generate shorter gameplay sessions that focus on prescribing motion in challenging areas for the user. 
+# Reach Adaptive Experiences
 
-## Adaptive Volume Experience
+Reach's Adaptive Experiences are designed to accept a variety of inputs from the end user, which are then analyzed by the Reach API layer and used to output the variables for a VR game experience that is optimized for that user's shoulder health needs at that moment in time.
 
-The volume experience presses users to hit points that are deemed challenging (just on the edge of possible) by the Reach System. Generally a series of 100 points will be prescribed for the user to hit, with 80 being points the Reach system is confident they can hit, and 20 being points that the system is unsure if they will achieve. The experience ends after the user has played for 3 minutes. At the current time gameplay records from adapative experiences do not inform prescription decisions for the rest of the system. Instead the latest assessment data is used when calculating prescribed points here. 
+Currently, Reach has a roster of two adaptive experiences.
 
-## Adaptive Velocity Experience
+### Firefly Chase
 
-The velocity experience times users on their performance as they hit prescribed points. THe user is asked to place their hand at a neutral point designated to them before rushing to hit the prescribed point. THe time taken to hit each point is recorded and the game is counted as complete when the user has played for 3 minutes. At the current time gameplay records from adapative experiences do not inform prescription decisions for the rest of the system. Instead the latest assessment data is used when calculating prescribed points here. 
+[Unity Scene: SubzoneAssessment.unity](https://github.com/TriadLabs/Reach-Shoulder-Health-Unity/blob/master/Assets/Scenes/SubzoneAssessment.unity)
 
-## Adaptive Accuracy Experience
+<p style="color:red;">NOTE: The current build of Firefly Chase is inoperative. The following notes represent the design specifications for a future development cycle.</p>
 
-The accuracy experience challenges users to hit fireflies with a jar that adjusts its size based on the user's performance in the game. As the user hits more consecutive points, the jar's size shrinks (and conversely the jar's size increases as the user misses points). The game is counted as complete when the user has played for 3 minutes. At the current time gameplay records from adapative experiences do not inform prescription decisions for the rest of the system. Instead the latest assessment data is used when calculating prescribed points here. 
+The gameplay of Firefly Chase is designed to encourage users to hit points that are deemed challenging (just on the edge of possible) by the Reach API layer.
+
+Generally a series of 100 points will be prescribed for the user to hit (based on the user's last volume assessment values), with 80 being points the Reach system is confident they can hit, and 20 being points that the system is unsure if they will achieve. The experience ends after the user has played for 3 minutes.
+
+### Space Gunner
+
+[Unity Scene: SpaceGunner.unity](https://github.com/TriadLabs/Reach-Shoulder-Health-Unity/blob/master/Assets/SpaceGunner/Scenes/SpaceGunner.unity)
+
+Space Gunner is also designed to encourage users to hit points that are deemed challenging by the Reach middle tier. Currently, Space Gunner fetches a set of placeholder points from the API layer and uses the targets to generate a 3D battle map scene in which users must fire weapons at targets to destroy enemy ships. Future development cycles will fetch a set of "smart" points from the API layer instead of the current placeholder set.
