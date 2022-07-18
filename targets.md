@@ -6,7 +6,7 @@ nav_order: 7
 
 # Painting Targets and Calculating Collisions
 
-Reach uses a set of algorthims housed in the API layer to determine how to paint targets for different VR experiences as well as calculate collisions. We make a distinction between targets that are hit from a gameplay perspective and those that are calculated to be collisions by the Reach system. This is because gameplay usually doesn't account for head movement/compensation while the Reach system does take these factors into account.
+Reach uses a set of algorthims (eventually to be housed in the API layer) to determine how to paint targets for different VR experiences as well as calculate collisions. We make a distinction between targets that are hit from a gameplay perspective and those that are calculated to be collisions by the Reach system. This is because gameplay usually doesn't account for head movement/compensation while the Reach system does take these factors into account.
 
 ### A Note on Head-Centric Targeting
 
